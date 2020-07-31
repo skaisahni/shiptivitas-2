@@ -159,6 +159,7 @@ app.put("/api/v1/clients/:id", (req, res) => {
   const oldStatusClients = clients.filter(
     c => c.id !== client.id && c.status === client.status
   );
+  
 
   // Decrement those that were greater than the changed client
   oldStatusClients.forEach(c => {
